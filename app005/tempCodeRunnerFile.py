@@ -1,5 +1,9 @@
-stmt = select(user_table).where(user_table.c.name == "spongebob")
+subq = (
+#     select(func.count(address_table.c.id).label("count"), address_table.c.user_id)
+#     .group_by(address_table.c.user_id)
+#     .subquery("aux")
+# )
 
-# with engine.connect() as conn:
-#     for row in conn.execute(stmt):
-#         print(row)
+# print(subq.name)
+
+# stmt = select(func.min(user_table.c.name))
