@@ -10,11 +10,11 @@ print(s)
 
 s.fullname = "Eugene H. Krabs the Great"
 
-print(s in session.dirty) # True, объект помещается в эту коллекцию
+print(s in session.dirty)  # True, объект помещается в эту коллекцию
 
 s_fullname = session.execute(select(User.fullname).where(User.id == 2)).scalar_one()
 print(s_fullname)
 
-print(s in session.dirty) # True, объект помещается в эту коллекцию
+print(s in session.dirty)  # True, объект помещается в эту коллекцию
 
 session.close()
